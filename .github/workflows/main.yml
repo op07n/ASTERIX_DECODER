@@ -21,7 +21,7 @@ jobs:
       - name: Build
         run: |
            cd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\"
-           .\MSBuild.exe "$Env:GITHUB_WORKSPACE\ASTERIX_APP\ASTERIX_APP.sln -p:Platform=Win32 -p:Configuration=Release"
+           .\MSBuild.exe -p:Platform=Win32 -p:Configuration=Release "$Env:GITHUB_WORKSPACE\ASTERIX_APP\ASTERIX_APP.sln"
            
       - uses: actions/upload-artifact@v1
         with:
